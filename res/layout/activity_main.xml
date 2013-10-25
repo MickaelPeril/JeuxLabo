@@ -15,15 +15,6 @@
         android:text="@COUCOU" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="23dp"
-        android:text="Option" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,5 +23,14 @@
         android:layout_marginTop="91dp"
         android:layout_toRightOf="@+id/textView1"
         android:text="Start" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="72dp"
+        android:text="Option" />
 
 </RelativeLayout>
