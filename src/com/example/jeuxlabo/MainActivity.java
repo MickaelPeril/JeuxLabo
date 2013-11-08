@@ -2,6 +2,7 @@ package com.example.jeuxlabo;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +19,11 @@ public class MainActivity extends Activity {
 		
         button1 = (Button) findViewById(R.id.button1);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-        	public void onClick(View v) {
-        		nouvellePage();
+        button1.setOnClickListener(new View.OnClickListener() { //click sur le button start
+        	public void onClick(View v) {    		
+        		//lancement de la nouvelle page ( class Start)
+        		Intent intent = new Intent(MainActivity.this, Start.class);
+        		startActivity(intent);
         	}
         });
 					
@@ -34,9 +37,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	public void nouvellePage(){ //methode ouverture d'une nouvelle page
-		
 	
-	}
 
 }
