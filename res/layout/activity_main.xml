@@ -8,20 +8,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@COUCOU" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="91dp"
-        android:layout_toRightOf="@+id/textView1"
         android:text="Start" />
 
     <Button
