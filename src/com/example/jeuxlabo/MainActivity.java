@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         	
         	public void onClick(View v) {    		
         		//lancement de la nouvelle page ( class Start)
-        		Intent intent = new Intent(MainActivity.this, Start.class);
+        		Intent intent = new Intent(MainActivity.this, Move.class);
         		startActivity(intent);
         	}
         });

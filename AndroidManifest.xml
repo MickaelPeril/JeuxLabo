@@ -27,6 +27,8 @@
             android:name="com.example.jeuxlabo.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+         <activity android:name="com.example.jeuxlabo.BounceView" />
+         <activity android:name="com.example.jeuxlabo.Move" />
     </application>
 
 </manifest>
