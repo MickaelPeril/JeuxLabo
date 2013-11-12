@@ -14,13 +14,14 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
         android:layout_marginTop="72dp"
-        android:text="Option" />
+        android:text="Option"
+		android:onClick="optionOnClick" />
 
     <Button
         android:id="@+id/button1"

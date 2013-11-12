@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
         button1 = (Button) findViewById(R.id.button1);
 
         button1.setOnClickListener(new View.OnClickListener() { //click sur le button start
+        	
         	public void onClick(View v) {    		
         		//lancement de la nouvelle page ( class Start)
         		Intent intent = new Intent(MainActivity.this, Start.class);
@@ -35,6 +36,15 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	public void optionOnClick(View view)
+	{
+		
+		
+		Intent intent;
+		intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
 	}
 	
 	
