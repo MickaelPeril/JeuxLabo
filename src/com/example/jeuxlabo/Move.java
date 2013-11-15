@@ -10,9 +10,11 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.view.Window;
 
 public class Move extends Activity implements SensorEventListener {
+	protected PowerManager.WakeLock vWakeLock;
 //public class Move extends Activity  {
     /** Called when the activity is first created. */
      // Just a RANDOM ID to recognize a Message later 
@@ -39,7 +41,8 @@ public class Move extends Activity implements SensorEventListener {
     }; 
 
     /** Called when the activity is first created. */ 
-    @Override 
+    @SuppressWarnings("deprecation")
+	@Override 
     public void onCreate(Bundle icicle) { 
          super.onCreate(icicle); 
          // Set fullscreen 
@@ -53,7 +56,11 @@ public class Move extends Activity implements SensorEventListener {
          /* create a Thread that will 
           * periodically send messages 
           * to our Handler */ 
-         new Thread(new RefreshRunner()).start(); 
+         new Thread(new RefreshRunner()).start();
+         // L'application bloque la mise en veille (voir onDestroy pour la relacher)
+         final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+         this.vWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
+         this.vWakeLock.acquire();
     } 
 
     class RefreshRunner implements Runnable { 
@@ -86,6 +93,14 @@ public class Move extends Activity implements SensorEventListener {
         sensorManager.unregisterListener(this); 
       super.onStop(); 
     } 
+    
+    // surchage de onDestroy qui est appelé quand on quitte l'application
+    // ici on relache l'interdiction de mise en veille
+    public void onDestroy() {
+    	// on remet la veille ecran comme avant
+        this.vWakeLock.release();
+        super.onDestroy();
+    }
 
 
      public void onAccuracyChanged(Sensor sensor, int accuracy) { 
