@@ -73,7 +73,7 @@ public class Move extends Activity implements SensorEventListener {
                    Move.this.myGUIUpdateHandler.sendMessage(message); 
 
                    try { 
-                        Thread.sleep(100); // a 10th of a second 
+                        Thread.sleep(10); // a 10th of a second 
                    } catch (InterruptedException e) { 
                         Thread.currentThread().interrupt(); 
                    } 
