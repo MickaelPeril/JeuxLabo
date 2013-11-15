@@ -65,7 +65,7 @@ public class BounceView extends View {
           /* Set the location, where the sprite 
            * will draw itself to the canvas */ 
           this.mySprite.setBounds(this.mySpritePos.x, this.mySpritePos.y, 
-                    this.mySpritePos.x + 300, this.mySpritePos.y + 300); 
+                    this.mySpritePos.x + 250, this.mySpritePos.y + 250); 
            
           /* Make the sprite draw itself to the canvas */ 
           this.mySprite.draw(canvas); 
