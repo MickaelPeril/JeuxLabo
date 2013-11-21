@@ -33,21 +33,24 @@ public final class R {
         public static final int campusid=0x7f020003;
         public static final int campusid_logo=0x7f020004;
         public static final int carreaux=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int tray=0x7f020007;
-        public static final int tray_shadow=0x7f020008;
+        public static final int cercle=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int table_campus=0x7f020008;
+        public static final int tray=0x7f020009;
+        public static final int tray_shadow=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0009;
-        public static final int beer=0x7f0b0007;
-        public static final int main_view=0x7f0b0000;
-        public static final int option=0x7f0b0003;
-        public static final int start=0x7f0b0004;
-        public static final int text=0x7f0b0008;
-        public static final int textDesc=0x7f0b0002;
-        public static final int textTile=0x7f0b0001;
-        public static final int tray=0x7f0b0006;
-        public static final int tray_shadow=0x7f0b0005;
+        public static final int action_settings=0x7f0b000a;
+        public static final int beer=0x7f0b0008;
+        public static final int button1=0x7f0b0001;
+        public static final int main_view=0x7f0b0002;
+        public static final int option=0x7f0b0000;
+        public static final int start=0x7f0b0005;
+        public static final int text=0x7f0b0009;
+        public static final int textDesc=0x7f0b0004;
+        public static final int textTile=0x7f0b0003;
+        public static final int tray=0x7f0b0007;
+        public static final int tray_shadow=0x7f0b0006;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -117,6 +120,10 @@ public final class R {
         public static final int AppTheme=0x7f090001;
     }
     public static final class xml {
-        public static final int settings=0x7f040000;
+        public static final int pref_data_sync=0x7f040000;
+        public static final int pref_general=0x7f040001;
+        public static final int pref_headers=0x7f040002;
+        public static final int pref_notification=0x7f040003;
+        public static final int settings=0x7f040004;
     }
 }
